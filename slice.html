@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        body {
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+        .swiper-wrapper {
+            animation: slideUp 1s ease-in-out; /* Tüm slaytları yukarı doğru kaydırma animasyonu */
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        .swiper-slide img {
+            padding: 0%;
+            margin: 0%;
+            width: calc(100%);
+            height: calc(100vh + 35px);
+        }
+    </style>
+</head>
+<body>
+   <br>
+   <br>
+   <br>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img alt="" src="https://media.slidesgo.com/storage/21800935/responsive-images/0-earthquake-drill-for-schools___media_library_original_1600_900.jpg"></div>
+        <div class="swiper-slide"><img alt="" src="https://media.slidesgo.com/storage/21800936/responsive-images/1-earthquake-drill-for-schools___media_library_original_1600_900.jpg"></div>
+        <div class="swiper-slide"><img alt="" src="https://media.slidesgo.com/storage/21800937/responsive-images/2-earthquake-drill-for-schools___media_library_original_1600_900.jpg"></div>
+        <div class="swiper-slide"><img alt="" src="https://media.slidesgo.com/storage/21800940/responsive-images/3-earthquake-drill-for-schools___media_library_original_1600_900.jpg"></div>
+        <div class="swiper-slide"><img alt="" src="https://media.slidesgo.com/storage/21800943/responsive-images/4-earthquake-drill-for-schools___media_library_original_1600_900.jpg"></div>
+        <div class="swiper-slide"><img alt="" src="https://media.slidesgo.com/storage/21800944/responsive-images/5-earthquake-drill-for-schools___media_library_original_1600_900.jpg"></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical', // Dikey kaydırma
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    mousewheel: true, // Fare tekerleği ile kaydırma
+    touchMove: true // Dokunmatik hareketlerle kaydırma
+});
+</script>
+</body>
+</html>
